@@ -21,7 +21,7 @@ RUN rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.
 RUN yum -y install curl ivykis ivykis-devel 
 
 #Put the syslog-ng repo in place
-COPY $PWD/czanik-syslog-ng-githead-epel-7.repo /etc/yum.repos.d/
+COPY $PWD/czanik-syslog-ng310-epel-7.repo /etc/yum.repos.d/
 RUN yum -y --enablerepo rhel-7-server-rpms,rhel-7-server-optional-rpms install syslog-ng
 
 #Satisfy all of the updat requirements for the cert scanner
