@@ -1,16 +1,29 @@
-.TH CORRUPT 1
+.TH "SYSLOG\-NG" "syslog\-ng Open Source Edition"
 .SH NAME
-corrupt \- modify files by randomly changing bits
-.SH SYNOPSIS
-.B corrupt
-[\fB\-n\fR \fIBITS\fR]
-[\fB\-\-bits\fR \fIBITS\fR]
-.IR file ...
+syslog-ng \- syslog\-ng system logger application
 .SH DESCRIPTION
-.B corrupt
-modifies files by toggling a randomly chosen bit.
-.SH OPTIONS
-.TP
-.BR \-n ", " \-\-bits =\fIBITS\fR
-Set the number of bits to modify.
-Default is one bit.
+.B 
+The syslog\-ng OSE application is a flexible and highly scalable system
+logging application\&. Typically, syslog\-ng is used to manage log messages
+and implement centralized logging, where the aim is to collect the log
+messages of several devices on a single, central log server\&. The different
+devices \- called syslog\-ng clients \- all run syslog\-ng, and collect the
+log messages from the various applications, files, and other
+\fIsources\fR\&. The clients send all important log messages to the remote
+syslog\-ng server, where the server sorts and stores them\&.
+.SH NOTES
+.IP " 1." 4
+\fBThe syslog-ng Open Source Edition Administrator Guide\fR
+.RS 4
+\%http://www.balabit.com/support/documentation/
+.RE
+.IP " 2." 4
+the official syslog-ng website
+.RS 4
+\%https://www.syslog-ng.org/
+.RE
+.IP " 3." 4
+\fBsyslog-ng mailing list\fR
+.RS 4
+\%https://lists.balabit.hu/mailman/listinfo/syslog-ng
+.RE
