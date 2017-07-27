@@ -4,11 +4,14 @@ MAINTAINER Peter Czanik <peter.czanik@balabit.com>
 #satisfy the label requirements
 LABEL name="balabit/syslog-ng-ose" \
       vendor="Balabit" \
-      version="3.10.1-2" \
-      release="OSE"
-
+      version="3.10.1" \
+      release="3" \
+      summary="syslog-ng open source edition" \
+      description="syslog-ng is an enhanced log daemon, supporting a wide range of input and output methods: syslog, unstructured text, message queues, databases (SQL and NoSQL alike) and more." \
+      url="https://www.syslog-ng.org/" \
+      run="docker run -d -v /data/syslog-ng/conf/syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf -v /data/syslog-ng/logs:/var/log -p 514:514 -p 601:601 --name container-syslog balabit/syslog-ng-ose"
 #Be sure to make the appropriate directories on your host or the container will not run
-LABEL run="docker run -d -v /data/syslog-ng/conf/syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf -v /data/syslog-ng/logs:/var/log -p 514:514 -p 601:601 --name container-syslog balabit/syslog-ng-ose"
+
 #Atomic help file
 COPY help.1 /help.1
 
